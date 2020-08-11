@@ -52,5 +52,11 @@
     // to restore the scene back to its current state.
 }
 
+- (void)dealloc
+{
+    [_window release];
+    [super dealloc];
+}
+
 
 @end
