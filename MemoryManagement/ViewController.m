@@ -43,11 +43,11 @@
     
     Person *me = [[Person alloc] init];
     
-    Car *honda = [[Car alloc] initWithMake:@"Civic SI"];
+    // This was autoreleased
+    Car *honda = [Car carWithMake: @"Civic SI"];
     
     me.car = honda;
     
-    [honda release];
     NSLog(@"The person is: %@", me);
     
     [honda retain];

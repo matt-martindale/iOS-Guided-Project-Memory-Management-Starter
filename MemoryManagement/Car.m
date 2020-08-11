@@ -40,4 +40,15 @@
     return [description autorelease];
 }
 
++ (instancetype)car;
+{
+    return [self carWithMake:@"Toyota"];
+}
+
++ (instancetype)carWithMake:(NSString *)make;
+{
+    Car *car = [[self alloc] initWithMake:make];
+    return [car autorelease];
+}
+
 @end
