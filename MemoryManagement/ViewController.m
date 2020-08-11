@@ -41,6 +41,32 @@
     
     [firstSring release];
     
+    Person *me = [[Person alloc] init];
+    
+    Car *honda = [[Car alloc] initWithMake:@"Civic SI"];
+    
+    me.car = honda;
+    
+    [honda release];
+    
+    NSLog(@"The person is: %@", me);
+    
+    [honda retain];
+    
+    Car *toyota = [[Car alloc] initWithMake:@"Camry"];
+    
+    me.car = toyota;
+    [toyota release];
+    
+    NSLog(@"The car is: %@", honda);
+    [honda release];
+    [me release];
+    
+    
+    
+    
+    
+    
 }
 
 
