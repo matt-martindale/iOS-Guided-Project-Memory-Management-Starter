@@ -21,9 +21,25 @@
 {
     [super viewDidLoad];
 
-    // TODO: Disable ARC in settings
+    NSMutableArray *array = [[NSMutableArray alloc] init];
     
-    NSLog(@"Hi");
+    for (NSInteger index = 0; index < 10; index += 1) {
+        NSMutableString *string = [[NSMutableString alloc] initWithString:@"Starting Value"];
+        
+        [array addObject:string];
+        
+        [string release];
+    }
+    
+    NSMutableString *firstSring = [array objectAtIndex:0];
+    [firstSring retain];
+    NSLog(@"The string is: %@", firstSring);
+    
+    [array release];
+    
+    NSLog(@"The string is still: %@", firstSring);
+    
+    [firstSring release];
     
 }
 
