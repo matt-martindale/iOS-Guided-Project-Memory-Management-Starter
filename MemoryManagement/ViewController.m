@@ -48,15 +48,15 @@
     me.car = honda;
     
     [honda release];
-    
     NSLog(@"The person is: %@", me);
     
     [honda retain];
     
-    Car *toyota = [[Car alloc] initWithMake:@"Camry"];
+//    Car *toyota = [[Car alloc] initWithMake:@"Camry"];
+    me.car = honda;
     
-    me.car = toyota;
-    [toyota release];
+//    me.car = toyota;
+//    [toyota release];
     
     NSLog(@"The car is: %@", honda);
     [honda release];
